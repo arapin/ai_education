@@ -1,8 +1,10 @@
 import numpy as np
-class perceptron:
+
+
+class Perceptron:
     def AND(self, x1, x2):
         w1, w2, theta = 0.5, 0.5, 0.7
-        tmp = x1*w1 + x2*w2
+        tmp = x1 * w1 + x2 * w2
         if tmp <= theta:
             return 0
         elif tmp > theta:
@@ -12,15 +14,15 @@ class perceptron:
         x = np.array([0, 1])
         w = np.array([0.5, 0.5])
         b = -0.7
-        print(w*x)
-        print(np.sum(w*x))
-        print(np.sum(w*x) + b)
+        print(w * x)
+        print(np.sum(w * x))
+        print(np.sum(w * x) + b)
 
     def BAND(self, x1, x2):
         x = np.array([x1, x2])
         w = np.array([0.5, 0.5])
         b = -0.7
-        tmp = np.sum(w*x) + b
+        tmp = np.sum(w * x) + b
         if tmp <= 0:
             return 0
         else:
@@ -30,7 +32,7 @@ class perceptron:
         x = np.array([x1, x2])
         w = np.array([-0.5, -0.5])
         b = 0.7
-        tmp = np.sum(w*x) + b
+        tmp = np.sum(w * x) + b
         if tmp <= 0:
             return 0
         else:
@@ -40,17 +42,18 @@ class perceptron:
         x = np.array([x1, x2])
         w = np.array([0.5, 0.5])
         b = -0.2
-        tmp = np.sum(w*x) + b
+        tmp = np.sum(w * x) + b
         if tmp <= 0:
             return 0
         else:
             return 1
 
-    def XOR(self,x1, x2):
+    def XOR(self, x1, x2):
         s1 = self.NAND(x1, x2)
         s2 = self.OR(x1, x2)
         y = self.AND(s1, s2)
         return y
+
 
 perc = perceptron()
 # print(perc.AND(0, 0))
