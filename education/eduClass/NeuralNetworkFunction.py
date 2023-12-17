@@ -1,10 +1,10 @@
 import numpy as np
 
 
-class NeuralNetWork:
+class NeuralNetWorkFunction:
     def __init__(self, x):
         '''
-        신경망 클래스
+        신경망 함수 클래스
         :param x:
         '''
         self.x = x

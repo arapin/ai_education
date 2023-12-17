@@ -1,5 +1,5 @@
 import numpy as np
-import education.eduClass.NeuralNetworkTest as nnt
+import education.eduClass.NeuralNetworkFunction as nnt
 
 
 class ThreeStepNeuralNetwork:
@@ -34,9 +34,9 @@ class ThreeStepNeuralNetwork:
         b1, b2, b3 = self.network['b1'], self.network['b2'], self.network['b3']
 
         a1 = np.dot(self.arg, W1) + b1
-        z1 = nnt.NeuralNetWork(a1).sigmoid_function()
+        z1 = nnt.NeuralNetWorkFunction(a1).sigmoid_function()
         a2 = np.dot(z1, W2) + b2
-        z2 = nnt.NeuralNetWork(a2).sigmoid_function()
+        z2 = nnt.NeuralNetWorkFunction(a2).sigmoid_function()
         a3 = np.dot(z2, W3) + b3
         y = self.identity_function(a3)
 
