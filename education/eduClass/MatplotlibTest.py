@@ -29,8 +29,3 @@ class PyplotTest:
         plt.title("sin & cos")  # 제목
         plt.legend()
         plt.show()
-
-
-pt = PyplotTest()
-# pt.plot_test()
-pt.plot_test2()

@@ -17,14 +17,6 @@ class ThreeStepNeuralNetwork:
         self.network['b3'] = np.array([0.1, 0.2])
         self.arg = arg
 
-    def identity_function(self,x):
-        '''
-        항등함수
-        :param x:
-        :return:
-        '''
-        return x
-
     def forward_function(self):
         '''
         3층 신경망 계산 함수
@@ -38,6 +30,6 @@ class ThreeStepNeuralNetwork:
         a2 = np.dot(z1, W2) + b2
         z2 = nnt.NeuralNetWorkFunction(a2).sigmoid_function()
         a3 = np.dot(z2, W3) + b3
-        y = self.identity_function(a3)
+        y = nnt.NeuralNetWorkFunction(a3).identity_function()
 
         return y
