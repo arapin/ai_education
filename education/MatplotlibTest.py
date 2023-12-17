@@ -6,7 +6,7 @@ class PyplotTest:
     def __init__(self):
         print("init pyplotTest")
 
-    def plotTest(self):
+    def plot_test(self):
         # 데이터 준비
         x = np.arange(0, 6, 0.1)
         y = np.sin(x)
@@ -15,7 +15,7 @@ class PyplotTest:
         plt.plot(x, y)
         plt.show()
 
-    def plotTest2(self):
+    def plot_test2(self):
         # 데이터 준비
         x = np.arange(0, 6, 0.1)
         y1 = np.sin(x)
@@ -32,5 +32,5 @@ class PyplotTest:
 
 
 pt = PyplotTest()
-# pt.plotTest()
-pt.plotTest2()
+# pt.plot_test()
+pt.plot_test2()
