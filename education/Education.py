@@ -76,6 +76,7 @@ import ThreeStepNeuralnetwork as tsn
 # maec6 = mae.MultiArrayEdu(np.array([1, 2]), np.array([[1, 3, 5], [2, 4, 6]]))
 # maec6.dis_array_multiply()
 
+# 3층 신경망 학습
 tsnc = tsn.ThreeStepNeuralNetwork(np.array([1.0, 0.5]))
 y = tsnc.forward_function()
 print(y)
