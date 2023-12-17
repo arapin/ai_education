@@ -1,9 +1,5 @@
-import NeuralNetworkTest as nnt
-import PerceptronTest as pt
 import numpy as np
-import matplotlib.pyplot as plt
-import MultiArrayEdu as mae
-import ThreeStepNeuralnetwork as tsn
+import eduClass.ThreeStepNeuralnetwork as tsn
 
 # perc = pt.Perceptron(0, 0)
 # perc2 = pt.Perceptron(1, 0)

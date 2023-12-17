@@ -1,5 +1,5 @@
 import numpy as np
-import NeuralNetworkTest as nnt
+import education.eduClass.NeuralNetworkTest as nnt
 
 
 class ThreeStepNeuralNetwork:
