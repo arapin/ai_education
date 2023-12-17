@@ -76,3 +76,5 @@ import eduClass.ThreeStepNeuralnetwork as tsn
 tsnc = tsn.ThreeStepNeuralNetwork(np.array([1.0, 0.5]))
 y = tsnc.forward_function()
 print(y)
+
+# TODO : 92PAGE부터 다시 시작
