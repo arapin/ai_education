@@ -31,6 +31,6 @@ class PyplotTest:
         plt.show()
 
 
-pt = pyplotTest()
+pt = PyplotTest()
 # pt.plotTest()
 pt.plotTest2()

@@ -55,7 +55,7 @@ class Perceptron:
         return y
 
 
-perc = perceptron()
+perc = Perceptron()
 # print(perc.AND(0, 0))
 # print(perc.AND(1, 0))
 # print(perc.AND(0, 1))
