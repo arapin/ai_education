@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import eduClass.ThreeStepNeuralnetwork as tsn
 import eduClass.NeuralNetworkFunction as nnt
+from eduClass.MnistClass import MnistClass as mc
 
 # perc = pt.Perceptron(0, 0)
 # perc2 = pt.Perceptron(1, 0)
@@ -82,7 +83,9 @@ import eduClass.NeuralNetworkFunction as nnt
 # 소프트맥스 함수
 # nntfc = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
 # print(nntfc)
-y = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
-print(y)
-print(np.sum(y))
+# y = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
+# print(y)
+# print(np.sum(y))
+
+mc.mnist_show()
 
