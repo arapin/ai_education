@@ -1,5 +1,7 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import eduClass.ThreeStepNeuralnetwork as tsn
+import eduClass.NeuralNetworkFunction as nnt
 
 # perc = pt.Perceptron(0, 0)
 # perc2 = pt.Perceptron(1, 0)
@@ -41,14 +43,14 @@ import eduClass.ThreeStepNeuralnetwork as tsn
 # print(nen3.sigmoid_function())
 #
 # xxx = np.arange(-5.0, 5.0, 0.1)
-# nen4 = nnt.NeuralNetWork(xxx)
+# nen4 = nnt.NeuralNetWorkFunction(xxx)
 # yyy = nen4.sigmoid_function()
 # plt.plot(xxx, yyy)
 # plt.ylim(-0.1, 1.1)
 # plt.show()
 
 # xxx = np.arange(-5.0, 5.0, 0.1)
-# nen4 = nnt.NeuralNetWork(xxx)
+# nen4 = nnt.NeuralNetWorkFunction(xxx)
 # yyy = nen4.relu_function()
 # plt.plot(xxx, yyy)
 # plt.ylim(-0.1, 5)
@@ -73,8 +75,14 @@ import eduClass.ThreeStepNeuralnetwork as tsn
 # maec6.dis_array_multiply()
 
 # 3층 신경망 학습
-tsnc = tsn.ThreeStepNeuralNetwork(np.array([1.0, 0.5]))
-y = tsnc.forward_function()
-print(y)
+# tsnc = tsn.ThreeStepNeuralNetwork(np.array([1.0, 0.5]))
+# y = tsnc.forward_function()
+# print(y)
 
-# TODO : 92PAGE부터 다시 시작
+# 소프트맥스 함수
+# nntfc = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
+# print(nntfc)
+y = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
+print(y)
+print(np.sum(y))
+

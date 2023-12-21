@@ -44,3 +44,15 @@ class NeuralNetWorkFunction:
         :return:
         '''
         return self.arg
+
+    def softmax_function(self):
+        '''
+        소프트 맥스 함수
+        :return:
+        '''
+        c = np.max(self.arg)
+        exp_a = np.exp(self.arg - c)
+        sum_exp_a = np.sum(exp_a)
+        y = exp_a / sum_exp_a
+
+        return y
