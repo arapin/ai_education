@@ -86,6 +86,6 @@ from eduClass.MnistClass import MnistClass as mc
 # y = nnt.NeuralNetWorkFunction(np.array([0.3, 2.9, 4.0])).softmax_function()
 # print(y)
 # print(np.sum(y))
-
-mc.mnist_show()
+# 이미지 출력
+# mc.mnist_show()
 
