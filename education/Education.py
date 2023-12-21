@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import eduClass.ThreeStepNeuralnetwork as tsn
 import eduClass.NeuralNetworkFunction as nnt
-from eduClass.MnistClass import MnistClass as mc
+from eduClass.MnistClass import MnistClass
 
 # perc = pt.Perceptron(0, 0)
 # perc2 = pt.Perceptron(1, 0)
@@ -87,5 +87,6 @@ from eduClass.MnistClass import MnistClass as mc
 # print(y)
 # print(np.sum(y))
 # 이미지 출력
-# mc.mnist_show()
+mc = MnistClass()
+mc.img_show()
 
