@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import eduClass.ThreeStepNeuralnetwork as tsn
 import eduClass.NeuralNetworkFunction as nnt
 from eduClass.MnistClass import MnistClass
+from eduClass.NeuralNetwork import NeuralNetwork
 
 # perc = pt.Perceptron(0, 0)
 # perc2 = pt.Perceptron(1, 0)
@@ -87,6 +88,17 @@ from eduClass.MnistClass import MnistClass
 # print(y)
 # print(np.sum(y))
 # 이미지 출력
-mc = MnistClass()
-mc.img_show()
+# mc = MnistClass()
+# mc.img_show()
+# mnist 데이터 추론
+nn = NeuralNetwork()
+x, t = nn.get_data()
+accuracy_cnt = 0
+for i in range(len(x)):
+    y = nn.predict(x[i])
+    p = np.argmax(y)
+    if p == t[i]:
+        accuracy_cnt += 1
+
+print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
 
