@@ -92,13 +92,23 @@ from eduClass.NeuralNetwork import NeuralNetwork
 # mc.img_show()
 # mnist 데이터 추론
 nn = NeuralNetwork()
-x, t = nn.get_data()
 accuracy_cnt = 0
-for i in range(len(x)):
-    y = nn.predict(x[i])
-    p = np.argmax(y)
-    if p == t[i]:
-        accuracy_cnt += 1
+# print("Accuracy:" + nn.accuracy_result(accuracy_cnt))
+print("Accuracy:" + nn.accuracy_batch_result(accuracy_cnt))
 
-print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
+def mean_squared_error(y, t):
+    return 0.5 * np.sum((y-t)**2)
+
+def cross_entropy_error(y, t):
+    delta = 1e-7
+    return -np.sum(t * np.log(y+delta))
+
+t = [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+# y = [0.1, 0.05, 0.6, 0.0, 0.05, 0.1, 0.0, 0.1, 0.0, 0.0]
+y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.0, 0.0]
+# print(mean_squared_error(np.array(t), np.array(y)))
+print(cross_entropy_error(np.array(y), np.array(t)))
+
+
+
 

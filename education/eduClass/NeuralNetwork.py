@@ -27,3 +27,23 @@ class NeuralNetwork:
         a3 = np.dot(z2, W3) + b3
         y = NeuralNetWorkFunction(a3).softmax_function()
         return y
+
+    def accuracy_result(self, arg):
+        x, t = self.get_data()
+        for i in range(len(x)):
+            y = self.predict(x[i])
+            p = np.argmax(y)
+            if p == t[i]:
+                arg += 1
+        return str(float(arg) / len(x))
+
+    def accuracy_batch_result(self, arg):
+        x, t = self.get_data()
+        batch_size = 100
+
+        for i in range(0, len(x), batch_size):
+            x_batch = x[i:i+batch_size]
+            y_batch = self.predict(x_batch)
+            p = np.argmax(y_batch, axis=1)
+            arg += np.sum(p == t[i:i+batch_size])
+        return str(float(arg) / len(x))
