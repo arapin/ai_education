@@ -47,3 +47,26 @@ class NeuralNetwork:
             p = np.argmax(y_batch, axis=1)
             arg += np.sum(p == t[i:i+batch_size])
         return str(float(arg) / len(x))
+
+    def mean_squared_error(self,y, t):
+        return 0.5 * np.sum((y-t)**2)
+
+    def cross_entropy_error(self,y, t):
+        delta = 1e-7
+        return -np.sum(t * np.log(y+delta))
+
+    def numerical_gradient(self, f, x):
+        h = 1e-4
+        grad = np.zeros_like(x)
+
+        for idx in range(x.size):
+            tmp_val = x[idx]
+            x[idx] = tmp_val + h
+            fxh1 = f(x)
+
+            x[idx] = tmp_val - h
+            fxh2 = f(x)
+
+            grad[idx] = (fxh1 - fxh2) / (2*h)
+            x[idx] = tmp_val
+        return grad
